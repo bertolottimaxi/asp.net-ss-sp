@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+<!DOCTYPE=html>
+<html>
+
+<head>
+
+    <script>
+        function disableBackButton() {
+//            window.history.go(1)
+            window.location.replace(window.history.state))
+         
+        }
+        setTimeout("disableBackButton()", 0);
+    </script>
+    <link href="~/Content/Login.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+
+    <link rel="stylesheet" href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/dist/mdb5/standard/core.min.css">
+
+
+
+</head>
+
+<body>
+
+    <!-- Section: Design Block -->
+    <section class=" text-center text-lg-start">
+
+        <div class="card mb-3 align-items-center">
+            <div class="row g-0 d-flex ">
+                <div class="col-lg-4 d-none d-lg-flex">
+                    <img style="border-radius: 2em; height: 20em;" src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" alt="Logo"
+                         class="w-100 rounded-t-5 rounded-tr-lg-0 rounded-bl-lg-5" />
+                </div>
+                <div class="col-lg-8">
+                    <div class="card-body py-5 px-md-5">
+
+                        <form action="@Url.Action("Login","Access")" method="post">
+
+                            <div class="form-outline mb-4">
+                                <input type="text" name="IdUsuario" class="form-control" />
+                                <label class="form-label" for="form2Example1">Usuario</label>
+                            </div>
+
+                            <!-- Password input -->
+                            <div class="form-outline mb-4">
+                                <input type="password" name="Pass" class="form-control" />
+                                <label class="form-label" for="form2Example2">Contraseña</label>
+                            </div>
+
+                            <!-- 2 column grid layout for inline styling -->
+                            <div class="row mb-4">
+                                <div class="col d-flex justify-content-center">
+                                    
+                                </div>
+
+
+                            </div>
+
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-primary btn-block">
+                                Iniciar Sesión
+                            </button>
+                            @ViewBag.Message
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

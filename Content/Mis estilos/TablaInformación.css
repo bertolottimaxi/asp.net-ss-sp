@@ -1,0 +1,32 @@
+﻿table {
+    margin-top: 2em;
+    margin-left: 4em;
+    border: 2px solid #515151;
+}
+
+tr:nth-child(2n + 1) td {
+    background-color: #fafafa;
+}
+
+
+tr:nth-child(2n+2) td {
+    background-color: #e9e9e9;
+}
+
+
+tr {    
+    border-top: 2px solid #383D3D !important;
+}
+
+td {
+    padding: 10px;
+    border: 2px solid #acacac !important;
+}
+
+.dni {
+    width: 8em;
+}
+.nya {
+    width: 18em;
+}
+

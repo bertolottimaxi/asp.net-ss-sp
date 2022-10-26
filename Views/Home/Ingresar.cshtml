@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Ingresar";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/Mis estilos/Formulario.css" rel="stylesheet" />
+
+    <title>Ingresar</title>
+</head>
+<body>
+    <h3>Ingrese la información del nuevo agente</h3>
+    <form action="@Url.Action("Ingresar","Home")" method="post">
+
+        <input type="text" name="Dni" placeholder="DNI" />
+        <br />
+
+        <input type="text" name="NombreyApellido" placeholder="Nombre y apellido" />
+        <br />
+        <button type="submit">Guardar </button>
+
+    </form>
+
+    @ViewBag.message
+
+
+</body>
+</html>
